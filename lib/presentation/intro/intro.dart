@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:studentor_mobile/login/login.dart';
+import 'package:studentor_mobile/presentation/login/login.dart';
 
-class Intro extends StatelessWidget {
-  const Intro({Key? key}) : super(key: key);
+class IntroPage extends StatelessWidget {
+  const IntroPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +61,7 @@ class Intro extends StatelessWidget {
                       backgroundColor:
                           MaterialStateProperty.all(Color(0xFF355BE2))),
                   onPressed: () {
-                    Navigator.push(context, CupertinoPageRoute(builder: ((context) => Login())));
+                    Navigator.pushNamed(context, '/login');
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),

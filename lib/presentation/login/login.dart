@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,9 @@ class Login extends StatelessWidget {
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle, color: Color(0xFF6D28FF)),
                           child: InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, '/');
+                            },
                             child: const Padding(
                                 padding: EdgeInsets.all(8),
                                 child: Icon(Icons.arrow_forward)),
