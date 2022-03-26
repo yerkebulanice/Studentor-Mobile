@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
     TabItem(icon: Icons.work, title: 'Вакансии'),
     TabItem(icon: Icons.home, title: 'Главная'),
     TabItem(icon: Icons.supervised_user_circle_outlined, title: 'Менторы'),
-    TabItem(icon: Icons.people, title: 'Профиль'),
+    TabItem(icon: Icons.person, title: 'Профиль'),
   ];
 
   @override
