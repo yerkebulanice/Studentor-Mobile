@@ -11,7 +11,25 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('This is profile page')),
+      body: SingleChildScrollView(
+          padding: EdgeInsets.all(24.0),
+          child: Column(
+            children: [
+              SizedBox(height: 56.0),
+              Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.asset(
+                      'assets/images/nike.png',
+                      fit: BoxFit.cover,
+                      width: 108.0,
+                    ),
+                  ),
+                ],
+              )
+            ],
+          )),
     );
   }
 }
