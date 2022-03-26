@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   ];
 
   static const List<TabItem> _tabItems = <TabItem>[
-    TabItem(icon: Icons.home, title: 'Сообщество'),
+    TabItem(icon: Icons.home, title: 'Группы'),
     TabItem(icon: Icons.work, title: 'Вакансии'),
     TabItem(icon: Icons.home, title: 'Главная'),
     TabItem(icon: Icons.supervised_user_circle_outlined, title: 'Менторы'),
