@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # UI/UX
+  convex_bottom_bar: ^3.0.0
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
