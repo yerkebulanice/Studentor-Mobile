@@ -57,6 +57,9 @@ class _LoginPageState extends State<LoginPage> {
         }
       });
     } else {
+      setState(() {
+        isLoading = false;
+      });
       showInSnackBar('Прошу, заполните все поля!');
     }
   }
