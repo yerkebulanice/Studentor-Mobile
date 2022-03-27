@@ -11,9 +11,16 @@ class MentorPage extends StatefulWidget {
 }
 
 class _MentorPageState extends State<MentorPage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  void showInSnackBar(String value) {
+    _scaffoldKey.currentState!.showSnackBar(SnackBar(content: Text(value)));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: Color(0xffEAEFFB),
       body: SingleChildScrollView(
         child: Padding(
@@ -32,7 +39,7 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: "Search",
+                      hintText: "Найти Ментора",
                       border: InputBorder.none,
                       suffixIcon: Icon(Icons.search),
                     ),
@@ -114,9 +121,12 @@ class _MentorPageState extends State<MentorPage> {
                   ),
                 ],
               ),
+              SizedBox(height: 8.0),
               ElevatedButton(
-                onPressed: () {},
-                child: Text('Выбрать как ментора'),
+                onPressed: () {
+                  showInSnackBar('Вы успешно выбрали ментора!');
+                },
+                child: Center(child: Text('Выбрать как ментора')),
               ),
             ],
           ),

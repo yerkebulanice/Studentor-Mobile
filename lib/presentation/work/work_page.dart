@@ -29,7 +29,7 @@ class _WorkPageState extends State<WorkPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Color(0xffEAEFFB),
       body: AnimatedSwitcher(
         duration: Duration(milliseconds: 300),
         child: currentWidgetView,
@@ -64,10 +64,10 @@ class _WorkPageState extends State<WorkPage> {
       onTap: () {
         setState(() {
           switch (item.title) {
-            case "Jobs":
+            case "Стажировки":
               currentWidgetView = Jobs();
               break;
-            case "Applications":
+            case "Мои заявки":
               currentWidgetView = Applications();
               break;
           }

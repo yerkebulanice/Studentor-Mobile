@@ -52,7 +52,7 @@ class _JobsState extends State<Jobs> {
                   padding:
                       EdgeInsets.only(right: 32, left: 32, top: 8, bottom: 20),
                   child: Text(
-                    "Developer \nJobs",
+                    "Стажировки: Парт-тайм работы",
                     style: TextStyle(
                         fontSize: 32, fontWeight: FontWeight.bold, height: 1.2),
                   ),
@@ -64,17 +64,17 @@ class _JobsState extends State<Jobs> {
                     spacing: 16,
                     runSpacing: 16,
                     children: [
-                      buildFilterOption("Developer"),
-                      buildFilterOption("San Francisco"),
-                      buildFilterOption(r"$30 - 50h"),
-                      buildFilterOption("Part-Time"),
+                      buildFilterOption("Мобильный разработчик"),
+                      buildFilterOption("Алматы"),
+                      buildFilterOption("100000-150000 ₸"),
+                      buildFilterOption("Стажировки"),
                     ],
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                   child: Text(
-                    "Recommended for you",
+                    "Рекомендуется для вас ",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -92,7 +92,7 @@ class _JobsState extends State<Jobs> {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                   child: Text(
-                    "Recently added",
+                    "Недавно добавленные",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -239,10 +239,10 @@ class _JobsState extends State<Jobs> {
                     height: 8,
                   ),
                   Text(
-                    r"$" + job.price + "/h",
+                    job.price + " ₸",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                      fontSize: 22,
                     ),
                   ),
                 ],
@@ -319,7 +319,7 @@ class _JobsState extends State<Jobs> {
               ),
             )),
             Text(
-              r"$" + job.price + "/h",
+              job.price + " ₸",
               style: TextStyle(
                 fontSize: 18,
               ),

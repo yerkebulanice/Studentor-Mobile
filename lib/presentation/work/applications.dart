@@ -21,7 +21,7 @@ class _ApplicationsState extends State<Applications> {
           Padding(
             padding: EdgeInsets.only(right: 32, left: 32, top: 48, bottom: 32),
             child: Text(
-              "Your \napplications (" + applications.length.toString() + ")",
+              "Ваши \nзаявки (" + applications.length.toString() + ")",
               style: TextStyle(
                   fontSize: 32, fontWeight: FontWeight.bold, height: 1.2),
             ),
@@ -135,7 +135,7 @@ class _ApplicationsState extends State<Applications> {
                 child: Container(
                   child: Center(
                     child: Text(
-                      r"$" + application.price + "/h",
+                      application.price + " ₸",
                       style: TextStyle(
                         fontSize: 24,
                       ),

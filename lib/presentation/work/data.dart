@@ -1,20 +1,17 @@
 class NavigationItem {
-
   String title;
 
   NavigationItem(this.title);
-
 }
 
-List<NavigationItem> getNavigationItemList(){
+List<NavigationItem> getNavigationItemList() {
   return <NavigationItem>[
-    NavigationItem("Jobs"),
-    NavigationItem("Applications"),
+    NavigationItem("Стажировки"),
+    NavigationItem("Мои заявки"),
   ];
 }
 
 class Application {
-
   String position;
   String company;
   String status;
@@ -22,21 +19,24 @@ class Application {
   String logo;
 
   Application(this.position, this.company, this.status, this.price, this.logo);
-
 }
 
-List<Application> getApplications(){
+List<Application> getApplications() {
   return <Application>[
-    Application("Flutter UI / UX Designer", "Nike Inc.", "Delivered", "40", "assets/images/nike.png"),
-    Application("Product Designer", "Google LLC", "Opened", "60", "assets/images/google.png"),
-    Application("UI / UX Designer", "Uber Technologies Inc.", "Cancelled", "55", "assets/images/uber.png"),
-    Application("Lead UI / UX Designer", "Apple Inc.", "Delivered", "80", "assets/images/apple.png"),
-    Application("Flutter UI Designer", "Amazon Inc.", "Not selected", "60", "assets/images/amazon.jpg"),
+    Application("Стажер в информационные технологии", " Azimut Solutions ",
+        "Delivered", "90000", "assets/images/azimut.png"),
+    Application(
+        "Java-инженер", "EPAM", "Opened", "100000", "assets/images/epam.png"),
+    Application("PHP программист ", " KOLESA group ", "Cancelled", "55000",
+        "assets/images/kolesa.png"),
+    Application("Стажер — программист в отдел техподдержки", "Prime Source",
+        "Delivered", "85000", "assets/images/prime.png"),
+    Application("Стажировка ", "Samgau TEAM", "Not selected", "120000",
+        "assets/images/samgau.png"),
   ];
 }
 
 class Job {
-
   String position;
   String company;
   String price;
@@ -44,21 +44,26 @@ class Job {
   String logo;
   String city;
 
-  Job(this.position, this.company, this.price, this.concept, this.logo, this.city);
-
+  Job(this.position, this.company, this.price, this.concept, this.logo,
+      this.city);
 }
 
-List<Job> getJobs(){
+List<Job> getJobs() {
   return <Job>[
-    Job("Flutter UI/UX", "Nike Inc.", "40", "Full-Time", "assets/images/nike.png", "San Francisco, California"),
-    Job("Product Designer", "Google LLC", "60", "Part-Time", "assets/images/google.png", "San Francisco, California"),
-    Job("UI / UX Designer", "Uber Technologies Inc.", "55", "Full-Time", "assets/images/uber.png", "San Francisco, California"),
-    Job("Lead UI/UX Designer", "Apple Inc.", "80", "Part-Time", "assets/images/apple.png", "San Francisco, California"),
-    Job("Flutter Developer", "Amazon Inc.", "60", "Full-Time", "assets/images/amazon.jpg", "San Francisco, California"),
+    Job("Стажер — программист в отдел техподдержки", "Prime Source", "85000",
+        "Part-Time", "assets/images/prime.png", "Astana, Kazakhstan"),
+    Job("Стажировка ", "Samgau TEAM", "120000", "Part-Time",
+        "assets/images/samgau.png", "Almaty, Kazakhstan"),
+    Job("Java-инженер", "EPAM", "100000", "Full-Time", "assets/images/epam.png",
+        "Almaty, Kazakhstan"),
+    Job("PHP программист", "KOLESA group ", "55000", "Part-Time",
+        "assets/images/kolesa.png", "Astana, Kazakhstan"),
+    Job("Flutter Developer", "Azimut Solutions", "140000", "Internship",
+        "assets/images/azimut.png", "Astana, Kazakhstan"),
   ];
 }
 
-List<String> getJobsRequirements(){
+List<String> getJobsRequirements() {
   return <String>[
     "Exceptional communication skills and team-working skills",
     "Know the principles of animation and you can create high fidelity prototypes",
