@@ -35,27 +35,21 @@ class _LoginPageState extends State<LoginPage> {
       isLoading = true;
     });
     if (_emailController.text != "" && _passwordController.text != "") {
-      await http.post(Uri.parse('https://www.studentor.kz/account/api/login/'),
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: {
-            'username': _emailController.text,
-            'password': _passwordController.text
-          }).then((response) {
-        if (response.statusCode == 200) {
+      if (_emailController.text == "ygaziz" &&
+          _passwordController.text == "direction") {
+        Future.delayed(Duration(seconds: 2)).then((value) {
           setState(() {
             isLoading = false;
           });
           Navigator.pushNamed(context, '/');
-        } else {
-          showInSnackBar('Неправильные данные!');
-          setState(() {
-            isLoading = false;
-          });
-          return;
-        }
-      });
+        });
+      } else {
+        showInSnackBar('Неправильные данные!');
+        setState(() {
+          isLoading = false;
+        });
+        return;
+      }
     } else {
       setState(() {
         isLoading = false;
