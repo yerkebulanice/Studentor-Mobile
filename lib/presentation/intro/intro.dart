@@ -15,24 +15,25 @@ class IntroPage extends StatelessWidget {
             Image.asset('assets/images/intro_back.png'),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(
-                  height: 10,
-                ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text('STUDENTOR',
-                          style: TextStyle(color: Color(0xFF0B11AE), fontSize: 24)),
-                      Icon(
-                          Icons.menu,
-                          size: 36,
+                      const Text(
+                        'STUDENTOR',
+                        style: TextStyle(
                           color: Color(0xFF0B11AE),
+                          fontSize: 24,
                         ),
-                      
+                      ),
+                      Icon(
+                        Icons.menu,
+                        size: 36,
+                        color: Color(0xFF0B11AE),
+                      ),
                     ],
                   ),
                 ),
@@ -75,13 +76,17 @@ class IntroPage extends StatelessWidget {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        SizedBox(width: 8,),
+                        SizedBox(
+                          width: 8,
+                        ),
                         Icon(Icons.arrow_forward)
                       ],
                     ),
                   ),
                 ),
-                Image.asset('assets/images/intro.png',)
+                Image.asset(
+                  'assets/images/intro.png',
+                )
               ],
             ),
           ],
