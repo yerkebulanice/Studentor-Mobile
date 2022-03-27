@@ -14,7 +14,7 @@ class _MentorPageState extends State<MentorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Color(0xffEAEFFB),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -56,7 +56,8 @@ class _MentorPageState extends State<MentorPage> {
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(8))),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(8))),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -66,9 +67,14 @@ class _MentorPageState extends State<MentorPage> {
                   Padding(
                     padding: const EdgeInsets.all(4.0),
                     child: CircleAvatar(
+                      radius: 25.0,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(16.0),
                         child: Image.asset(
-                      'assets/images/mentor_image.png',
-                    )),
+                          'assets/images/mentor_image.png',
+                        ),
+                      ),
+                    ),
                   ),
                   Flexible(
                     child: Column(
